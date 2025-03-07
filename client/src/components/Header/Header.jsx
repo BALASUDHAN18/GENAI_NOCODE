@@ -10,14 +10,14 @@ const Header = () => {
       </div>
       <div className='Header__Middle'>
     <input className="Header__input" placeholder="What do you want to automate?" />
-    <img src={Search} alt="Search-Icon" />
+    {/* <img src={Search} alt="Search-Icon" /> */}
       </div>
       <div className='Header__Right'>
         <button className='Header__Signup'>
-            Signup
+            SignUp
         </button>
         <button className='Header__Signin'>
-            Signin
+            SignIn
         </button>
       </div>
     </div>

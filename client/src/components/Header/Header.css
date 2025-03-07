@@ -3,18 +3,20 @@
 .Header__Container {
     display:flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .Header__Left {
     padding:15px;
     margin-left:20px;
+    flex:0.2;
 }
 .Header__Left > img {
     width:120px;
 }
 
 .Header__input {
-    width:400px;
+    flex:1;
     height:25px;
     border-radius: 15px;
 
@@ -22,7 +24,7 @@
 .Header__Middle{
     display: flex;
     align-items: center;
-
+    flex:1;
 }
 
 
@@ -38,9 +40,26 @@
 }
 
 .Header__Right > button {
-    padding: 0px 20px;
-    height:30px;
+    padding: 5px 20px;
+    height:40px;
     border-radius:7px;
+    background: none;
+    border:none;
+    font-size:18px;
+    font-family:"Lato",sans-serif;
+}
+
+.Header__Right > button:hover {
+    background-color: rgb(50, 116, 238);
+    cursor:pointer;
+}
+
+.Header__Right {
+    display: flex;
+    flex:0.4;
+    justify-content: flex-end;
+    margin-right:40px;
+    gap:7px;
 }
 
 
