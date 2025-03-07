@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.Header__Container {
+    display:flex;
+    align-items: center;
+}
+
+.Header__Left {
+    padding:15px;
+    margin-left:20px;
+}
+.Header__Left > img {
+    width:120px;
+}
+
+.Header__input {
+    width:400px;
+    height:25px;
+    border-radius: 15px;
+
+}
+.Header__Middle{
+    display: flex;
+    align-items: center;
+
+}
+
+
+.Header__input:placeholder-shown {
+    padding:10px;
+    font-family: 'Lato',sans-serif;
+    color:rgba(0, 0, 0);
+    font-size: 18px;
+}
+
+.Header__input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.Header__Right > button {
+    padding: 0px 20px;
+    height:30px;
+    border-radius:7px;
+}
+
+

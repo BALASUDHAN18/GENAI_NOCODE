@@ -1,0 +1,39 @@
+.navBar__elements {
+    display:grid;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar__container {
+    display: grid;
+    width:100px;
+    height:85vh;
+    align-items: flex-start;
+}
+
+.navBar__elements > button {
+    border-radius: 25px;
+    width:50px;
+    height:50px;
+    border:none;
+    background: transparent;
+}
+
+.navBar__elements > button > img {
+    padding:5px;
+}
+
+.navBar__elements > button:hover {
+    cursor:pointer;
+    background-color: rgb(50, 116, 238);
+}
+
+.navBar__elements > button > img{
+    color:white;
+}
+
+.navBar__Logo {
+    width:100px;
+    height:100px;
+}
