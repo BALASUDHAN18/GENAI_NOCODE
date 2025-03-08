@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 .Header__Container {
     display:flex;
@@ -60,6 +60,68 @@
     justify-content: flex-end;
     margin-right:40px;
     gap:7px;
+} */
+
+/* Header Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+.Header__Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
+.Header__Left img {
+  width: 120px;
+}
 
+.Header__Middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.Header__input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.Header__input:focus {
+  border-color: rgb(50, 116, 238);
+}
+
+.Header__Right {
+  display: flex;
+  gap: 10px;
+  flex: 0.3;
+}
+
+.Header__Right button {
+  padding: 8px 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Header__Right button:hover {
+  background-color: rgb(50, 116, 238);
+  color: white;
+}
