@@ -1,43 +1,4 @@
-/* .navBar__elements {
-    display:grid;
-    gap:20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.navBar__container {
-    display: grid;
-    width:100px;
-    height:85vh;
-    align-items: flex-start;
-}
-
-.navBar__elements > button {
-    border-radius: 25px;
-    width:50px;
-    height:50px;
-    border:none;
-    background: transparent;
-}
-
-.navBar__elements > button > img {
-    padding:5px;
-}
-
-.navBar__elements > button:hover {
-    cursor:pointer;
-    background-color: rgb(50, 116, 238);
-}
-
-.navBar__elements > button > img{
-    color:white;
-}
-
-.navBar__Logo {
-    width:100px;
-    height:100px;
-} */
-
+/* Sidebar NavBar */
 .navBar__container {
   display: flex;
   flex-direction: column;
@@ -54,6 +15,7 @@
   z-index: 999;
 }
 
+/* Navbar Buttons */
 .navBar__elements {
   display: flex;
   flex-direction: column;
@@ -87,4 +49,38 @@
 
 .navBar__elements button:hover img {
   filter: invert(1);
+}
+
+/* Dropdown Styling */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 60px; /* Aligns dropdown to the right of the button */
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
 }
