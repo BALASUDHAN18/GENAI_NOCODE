@@ -9,7 +9,7 @@ const HeroSection = () => {
   const [start, setStart] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    setPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    setPosition({ x: 0, y: 0 }); // Centering at (0,0) initially
   }, []);
 
   // Handle Scroll Zooming (Mouse)
@@ -21,22 +21,21 @@ const HeroSection = () => {
     });
   }, []);
 
-  // Handle Dragging (Mouse & Touch)
-  const startDragging = useCallback(
-    (clientX, clientY) => {
-      setDragging(true);
-      setStart({ x: clientX - position.x, y: clientY - position.y });
-    },
-    [position]
-  );
+  // Start Dragging
+  const startDragging = useCallback((clientX, clientY) => {
+    setDragging(true);
+    setStart({ x: clientX, y: clientY });
+  }, []);
 
+  // Update Dragging (Corrected Logic)
   const updateDragging = useCallback(
     (clientX, clientY) => {
       if (!dragging) return;
       setPosition((prevPosition) => ({
-        x: prevPosition.x + (clientX - start.x - prevPosition.x),
-        y: prevPosition.y + (clientY - start.y - prevPosition.y),
+        x: prevPosition.x + (clientX - start.x),
+        y: prevPosition.y + (clientY - start.y),
       }));
+      setStart({ x: clientX, y: clientY }); // Update start position
     },
     [dragging, start]
   );
@@ -105,18 +104,15 @@ const HeroSection = () => {
           position: 'absolute',
           top: 0,
           left: 0,
-          width: '20000px',
-          height: '20000px',
+          width: '30000px',
+          height: '30000px',
         }}
       ></div>
       <div className='HeroSection__elements'>
         <button
           onClick={() => {
             setScale(1);
-            setPosition({
-              x: window.innerWidth / 2,
-              y: window.innerHeight / 2,
-            });
+            setPosition({ x: 0, y: 0 }); // Reset position to the center
           }}
         >
           Reset Zoom

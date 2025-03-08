@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+.SignIn__Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+/* SignIn Form Box */
+.SignIn__Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  text-align: center;
+}
+
+/* Google Button Container */
+.SignIn__Button {
+  margin-top: 20px;
+}
+
+/* Google OAuth Login Wrapper */
+.SignIn__Google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SignIn__Form > h1 {
+  font-size: 32px;
+  font-family: 'Lato', sans-serif;
+}

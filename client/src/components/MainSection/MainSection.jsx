@@ -1,14 +1,16 @@
-import React from 'react'
-import './MainSection.css'
-import NavBar from '../NavBar/NavBar'
-import HeroSection from '../HeroSection/HeroSection'
+import React from 'react';
+import './MainSection.css';
+import NavBar from '../NavBar/NavBar';
+import HeroSection from '../HeroSection/HeroSection';
+import Header from '../Header/Header';
 const MainSection = () => {
   return (
     <div className='MainSection__container'>
-        <NavBar />
-        <HeroSection />
+      <Header />
+      <NavBar />
+      <HeroSection />
     </div>
-  )
-}
+  );
+};
 
-export default MainSection
+export default MainSection;
