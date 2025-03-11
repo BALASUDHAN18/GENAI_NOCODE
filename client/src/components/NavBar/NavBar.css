@@ -1,43 +1,3 @@
-/* .navBar__elements {
-    display:grid;
-    gap:20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.navBar__container {
-    display: grid;
-    width:100px;
-    height:85vh;
-    align-items: flex-start;
-}
-
-.navBar__elements > button {
-    border-radius: 25px;
-    width:50px;
-    height:50px;
-    border:none;
-    background: transparent;
-}
-
-.navBar__elements > button > img {
-    padding:5px;
-}
-
-.navBar__elements > button:hover {
-    cursor:pointer;
-    background-color: rgb(50, 116, 238);
-}
-
-.navBar__elements > button > img{
-    color:white;
-}
-
-.navBar__Logo {
-    width:100px;
-    height:100px;
-} */
-
 .navBar__container {
   display: flex;
   flex-direction: column;
@@ -47,11 +7,11 @@
   top: 50%;
   transform: translateY(-50%);
   width: 80px;
-  height: auto;
   background-color: #fff;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
   padding: 20px 0;
   z-index: 999;
+  border-radius: 0 10px 10px 0;
 }
 
 .navBar__elements {
@@ -61,6 +21,7 @@
   align-items: center;
 }
 
+/* 🔹 Default Button Styling */
 .navBar__elements button {
   width: 50px;
   height: 50px;
@@ -70,14 +31,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  will-change: transform;
 }
 
+/* 🔹 Hover Effect */
 .navBar__elements button:hover {
   background-color: rgb(50, 116, 238);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
+/* 🔹 Button Images */
 .navBar__elements button img {
   width: 24px;
   height: 24px;
@@ -85,6 +50,18 @@
   transition: filter 0.3s ease-in-out;
 }
 
+/* 🔹 Hover Effect on Images */
 .navBar__elements button:hover img {
+  filter: invert(1);
+}
+
+/* 🔥 Active Link Styling */
+.navBar__elements .active-link button {
+  background-color: rgb(30, 92, 220);
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 8px rgba(50, 116, 238, 0.5);
+}
+
+.navBar__elements .active-link button img {
   filter: invert(1);
 }

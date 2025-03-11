@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
-// import sharevideo from '../assets/shareVideo.mp4';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-// import { FcGoogle } from 'react-icons/fc';
 import { GoogleLogin } from '@react-oauth/google';
-// import { gapi } from 'gapi-script';
 import { jwtDecode } from 'jwt-decode';
 import { client, urlFor } from '../../../Client';
 import { useNavigate } from 'react-router-dom';
